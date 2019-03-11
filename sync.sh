@@ -1,6 +1,6 @@
 #!/bin/bash
 max_process=$1
-MY_REPO=Willie-lin
+MY_REPO=lin
 interval=.
 max_per=70
 quay_list=sync_list/quay.loop
