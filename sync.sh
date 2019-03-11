@@ -17,10 +17,10 @@ Multi_process_init() {
 }
 
 git_init(){
-    git config --global user.name "zhangguanzhang"
-    git config --global user.email zhangguanzhang@qq.com
+    git config --global user.name "Willie-lin"
+    git config --global user.email yyhmmwan@gmail.com
     git remote rm origin
-    git remote add origin git@github.com:zhangguanzhang/gcr.io.git
+    git remote add origin git@github.com:Willie-lin/gci.io.git
     git pull
     if git branch -a |grep 'origin/develop' &> /dev/null ;then
         git checkout develop
