@@ -218,7 +218,7 @@ main(){
     live_start_time=$(date +%s)
     read sync_time < sync_check
     [ $(( (`date +%s` - sync_time)/3600 )) -ge 6 ] && {
-        sync_domain_repo gcr.io
+        sync_domain_repo gci.io
         sync_domain_repo quay.io
         date +%s > sync_check
     }
@@ -233,7 +233,7 @@ main(){
         sed -i '/'"$repo"'/d' $quay_list;echo "$repo" >> $quay_list
     done
     for repo in ${GOOLE_NAMESPACE[@]};do
-        image_pull gcr.io/$repo google
+        image_pull gci.io/$repo google
         sed -i '/'"$repo"'/d' $google_list;echo "$repo" >> $google_list
     done
 
