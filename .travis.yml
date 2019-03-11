@@ -1,18 +1,18 @@
 sudo: required
 language: python
 python:
-- '2.7'
+    - '2.7'
 addons:
-  apt:
-      packages:
-        - docker-ce
+     apt:
+        packages:
+            - docker-ce
 branches:
-    only:
-     - master
-  install:
-  - git remote -v
-  script:
-    - "bash ./sync.sh 5"
+     only:
+       - master
+install:
+    - git remote -v
+script:
+- "bash ./sync.sh 5"
 before_install:
 - openssl aes-256-cbc -K $encrypted_ed9590141454_key -iv $encrypted_ed9590141454_iv
   -in .travis/conf.tar.gz.enc -out ~/conf.tar.gz -d
